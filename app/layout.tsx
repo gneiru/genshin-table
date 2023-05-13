@@ -1,7 +1,12 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Acme } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Acme({
+  weight: ['400', '400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      
+      <body className={font.className}>{children}</body>
     </html>
   )
 }
